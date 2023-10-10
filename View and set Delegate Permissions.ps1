@@ -1,9 +1,11 @@
-﻿# Function to view delegation permissions on a specified user
+# Function to view delegation permissions on a specified user
 function View-Permission {
     param (
         [string]$EmailAddress
     )
 
+    # Purpose: View delegation permissions on a specified user's mailbox
+    
     Write-Host "Viewing Permissions for $EmailAddress"
     
     # Get FullAccess permissions
@@ -43,6 +45,8 @@ function Add-Permission {
         [string]$EmailAddress
     )
 
+    # Purpose: Add user/group permissions (Full Access and Send As) to a shared mailbox
+
     Write-Host "Adding Permissions to $EmailAddress"
     $UserOrGroup = Read-Host "Enter the User/Group to add with Full Access and Send As Permissions, Press CTRL + C to break"
     
@@ -62,6 +66,8 @@ function Remove-Permission {
         [string]$EmailAddress
     )
 
+    # Purpose: Remove user/group permissions (Full Access and Send As) from a shared mailbox
+
     Write-Host "Removing Permissions from $EmailAddress"
     $UserOrGroup = Read-Host "Enter the User/Group to remove from Full Access and Send As Permissions, Press CTRL + C to break"
     
@@ -78,6 +84,7 @@ function Remove-Permission {
 #
 # Function to validate email address
 function Validate-EmailAddress($email) {
+    # Purpose: Validate if an email address is in a valid format
     $emailPattern = "^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
     return $email -match $emailPattern
 }
