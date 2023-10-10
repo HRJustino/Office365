@@ -1,4 +1,4 @@
-﻿# Prompt the user for their choice of action
+# Prompt the user for their choice of action
 Clear-Host
 Write-Host "Check Delegated access a specific user has access to:"
 Write-Host "1. Get Mailbox Information"
@@ -7,6 +7,8 @@ $actionChoice = Read-Host
 
 # Function to get mailbox information
 function Get-MailboxInformation {
+    # Purpose: Get information about mailboxes to check for delegated access
+
     Set-ExecutionPolicy RemoteSigned
     Import-Module ExchangeOnlineManagement
     Connect-ExchangeOnline
