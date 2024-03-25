@@ -9,4 +9,4 @@ Office 365 Scripts Require admin rights for the tenant targeted, if you are not 
 
 I do not work with scripting and have very little knowledge of how to script but i have managed to put these scripts togehter with help of internet searching and AI-Tools.
 
-I put my Scripts on Github incase anyone needed thee functionality of my scripts.
+I put my Scripts on Github incase anyone needed the functionality of my scripts.
